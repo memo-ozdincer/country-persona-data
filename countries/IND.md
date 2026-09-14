@@ -1,4 +1,4 @@
-# India — 10,609 evidence record IDs
+# India (10,609 evidence record IDs)
 
 [Open source explorer](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=IND)
 
@@ -20,7 +20,7 @@ Breakdown rows include overlapping representations and must not be summed.
 
 ## Data sources
 
-<details><summary>India Mission to the UN — statements — 5 records</summary>
+<details><summary>India Mission to the UN (statements) (5 records)</summary>
 
 Official UN statements and extracted evidence.
 
@@ -63,7 +63,7 @@ Source evidence exists; a task and answer are not inherent in a document.
 
 </details>
 
-<details><summary>India Press Information Bureau — government releases — 4 records</summary>
+<details><summary>India Press Information Bureau (government releases) (4 records)</summary>
 
 Government announcements, including the updated climate commitment.
 
@@ -106,7 +106,7 @@ Source evidence exists; a task and answer are not inherent in a document.
 
 </details>
 
-<details><summary>OHCHR — Universal Human Rights Index — 1,718 records</summary>
+<details><summary>OHCHR (Universal Human Rights Index) (1,718 records)</summary>
 
 UPR recommendations, reviewed-state response labels and institutional evidence. A recommendation about a country is not necessarily a statement by that country.
 
@@ -149,7 +149,7 @@ Question contains recommendation; text contains the response label.
 
 </details>
 
-<details><summary>Project annotations — policy claims and applications — 9 records</summary>
+<details><summary>Project annotations (policy claims and applications) (9 records)</summary>
 
 Project-authored claims and question–evidence–answer applications derived from linked official sources. These are review candidates, not authentic historical dialogue.
 
@@ -207,7 +207,7 @@ Source evidence exists; a task and answer are not inherent in a document.
 
 </details>
 
-<details><summary>UN General Assembly — speech corpus — 1,047 records</summary>
+<details><summary>UN General Assembly (speech corpus) (1,047 records)</summary>
 
 Upstream speech segments and derived country-attributed text. Some boundaries and speakers remain unverified; meeting text may include several speakers.
 
@@ -250,7 +250,7 @@ Observed statement text; an instruction may be constructed from metadata.
 
 </details>
 
-<details><summary>UN General Assembly — voting data (UNGA-DM) — 7,509 records</summary>
+<details><summary>UN General Assembly (voting data: UNGA-DM) (7,509 records)</summary>
 
 Recorded vote labels and resolution identifiers. Most rows still lack joined proposal text; they are not complete decision-making environments.
 
@@ -278,7 +278,7 @@ Action label exists; proposal text is generally missing.
 
 </details>
 
-<details><summary>UN Human Rights Council — UPR national reports — 231 records</summary>
+<details><summary>UN Human Rights Council (UPR national reports) (231 records)</summary>
 
 Country reports and multilingual passages. These are evidence, not automatically verified policy behavior.
 
@@ -321,7 +321,7 @@ Source evidence exists; a task and answer are not inherent in a document.
 
 </details>
 
-<details><summary>UN records — joined decision cases — 2 records</summary>
+<details><summary>UN records (joined decision cases) (2 records)</summary>
 
 Twelve country views of two Ukraine resolutions, joining proposals, final votes and available public explanations. Retrospective cases, not a hidden forecast benchmark.
 
@@ -349,7 +349,7 @@ Joined retrospective cases; some explanation fields remain missing.
 
 </details>
 
-<details><summary>World Bank — World Development Indicators — 43 records</summary>
+<details><summary>World Bank (World Development Indicators) (43 records)</summary>
 
 Country–indicator–year observations, including missing cells. Values are dated facts, not preference or action labels.
 
@@ -377,7 +377,7 @@ Structured values and missingness flags; not a conversational trace.
 
 </details>
 
-<details><summary>World Trade Organization — government policy reports — 41 records</summary>
+<details><summary>World Trade Organization (government policy reports) (41 records)</summary>
 
 Government reports supplied for WTO trade-policy reviews. Preserve the government’s stated position and its publication date.
 

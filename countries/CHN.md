@@ -1,4 +1,4 @@
-# China — 41,632 evidence record IDs
+# China (41,632 evidence record IDs)
 
 [Open source explorer](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=CHN)
 
@@ -20,7 +20,7 @@ Breakdown rows include overlapping representations and must not be summed.
 
 ## Data sources
 
-<details><summary>China Ministry of Foreign Affairs — press conferences — 30,034 records</summary>
+<details><summary>China Ministry of Foreign Affairs (press conferences) (30,034 records)</summary>
 
 Full press-conference transcripts and extracted reporter–spokesperson Q&A. Translations of one conference belong to the same event family.
 
@@ -78,7 +78,7 @@ Source document; individual Q&A extraction exists for part of this source.
 
 </details>
 
-<details><summary>China Mission to the UN — statements — 1,762 records</summary>
+<details><summary>China Mission to the UN (statements) (1,762 records)</summary>
 
 Published diplomatic statements. A speech is an observed output; its original prompting situation is not necessarily reconstructed.
 
@@ -121,7 +121,7 @@ Source evidence exists; a task and answer are not inherent in a document.
 
 </details>
 
-<details><summary>National policy documents — China and Germany collection — 77 records</summary>
+<details><summary>National policy documents (China and Germany collection) (77 records)</summary>
 
 Strategy papers, white papers, WTO reports and derived passages in the initial country collection.
 
@@ -149,7 +149,7 @@ Source evidence exists; a task and answer are not inherent in a document.
 
 </details>
 
-<details><summary>OHCHR — Universal Human Rights Index — 2,259 records</summary>
+<details><summary>OHCHR (Universal Human Rights Index) (2,259 records)</summary>
 
 UPR recommendations, reviewed-state response labels and institutional evidence. A recommendation about a country is not necessarily a statement by that country.
 
@@ -192,7 +192,7 @@ Question contains recommendation; text contains the response label.
 
 </details>
 
-<details><summary>Project annotations — policy claims and applications — 4 records</summary>
+<details><summary>Project annotations (policy claims and applications) (4 records)</summary>
 
 Project-authored claims and question–evidence–answer applications derived from linked official sources. These are review candidates, not authentic historical dialogue.
 
@@ -250,7 +250,7 @@ Source evidence exists; a task and answer are not inherent in a document.
 
 </details>
 
-<details><summary>UN General Assembly — speech corpus — 915 records</summary>
+<details><summary>UN General Assembly (speech corpus) (915 records)</summary>
 
 Upstream speech segments and derived country-attributed text. Some boundaries and speakers remain unverified; meeting text may include several speakers.
 
@@ -293,7 +293,7 @@ Observed statement text; an instruction may be constructed from metadata.
 
 </details>
 
-<details><summary>UN General Assembly — voting data (UNGA-DM) — 6,354 records</summary>
+<details><summary>UN General Assembly (voting data: UNGA-DM) (6,354 records)</summary>
 
 Recorded vote labels and resolution identifiers. Most rows still lack joined proposal text; they are not complete decision-making environments.
 
@@ -321,7 +321,7 @@ Action label exists; proposal text is generally missing.
 
 </details>
 
-<details><summary>UN General Debate Corpus — 76 records</summary>
+<details><summary>UN General Debate Corpus (76 records)</summary>
 
 General Debate speeches. Keep country, session and speech date together; whole speeches are not dialogue trajectories.
 
@@ -349,7 +349,7 @@ Source text exists; no instruction–answer pair is inherent in the document.
 
 </details>
 
-<details><summary>UN Human Rights Council — UPR national reports — 102 records</summary>
+<details><summary>UN Human Rights Council (UPR national reports) (102 records)</summary>
 
 Country reports and multilingual passages. These are evidence, not automatically verified policy behavior.
 
@@ -377,7 +377,7 @@ Source evidence exists; a task and answer are not inherent in a document.
 
 </details>
 
-<details><summary>UN records — joined decision cases — 2 records</summary>
+<details><summary>UN records (joined decision cases) (2 records)</summary>
 
 Twelve country views of two Ukraine resolutions, joining proposals, final votes and available public explanations. Retrospective cases, not a hidden forecast benchmark.
 
@@ -405,7 +405,7 @@ Joined retrospective cases; some explanation fields remain missing.
 
 </details>
 
-<details><summary>UNBench — linked diplomatic task samples — 4 records</summary>
+<details><summary>UNBench (linked diplomatic task samples) (4 records)</summary>
 
 Acquired sample records with some draft text and observed outputs. This is not the full upstream benchmark or an interactive environment.
 
@@ -433,7 +433,7 @@ Observed statement text; an instruction may be constructed from metadata.
 
 </details>
 
-<details><summary>World Bank — World Development Indicators — 43 records</summary>
+<details><summary>World Bank (World Development Indicators) (43 records)</summary>
 
 Country–indicator–year observations, including missing cells. Values are dated facts, not preference or action labels.
 
