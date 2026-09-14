@@ -1,41 +1,57 @@
-# United Kingdom
+# United Kingdom: data and training examples
 
-[Open all United Kingdom records](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=GBR&view=explore) · [Statistics](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=GBR&kind=country_statistics&view=explore)
+[Open annotated example](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=GBR)
 
-Country attribution identifies the speaker or represented institution, not the population’s personality. Joint and EU positions retain institutional scope.
+## Available records by type
 
-## Territorial integrity of Ukraine — October 2022 · 2022-10-12
+| Type | Distinct record IDs |
+|---|---:|
+| Source records | 2,294 |
+| Evidence passages | 520 |
+| Recorded actions / responses | 8,186 |
+| Curated policy positions | 4 |
+| Authored policy applications | 3 |
+| Prepared prompt / completion views | 3 |
+| Linked decision cases | 2 |
 
-The draft rejects the referendums and attempted annexation, calls for non-recognition, demands reversal and withdrawal, and supports peaceful resolution.
+Distinct record IDs within each type and country, across indexed releases. Review/lineage objects are excluded. Translations, segments and derived views can overlap: do not add the rows or treat them as independent trajectories. Shared institutional records appear under each relevant country.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=2a89f271435d346dc3b9bb091caf2e9cbc15799a6e8aa65e25a5a0d74c76febe&view=explore&country=GBR&kind=decision_cases)
+Source languages: ar, en, es, fr, ru, zh.
 
-## Aggression against Ukraine — March 2022 · 2022-03-02
+## Actual authored applications
 
-The draft condemns the aggression against Ukraine and demands that Russia end its use of force and withdraw its forces.
+These are dated, source-grounded review candidates, not authentic historical Q&A or model outputs. None of these new applications is admitted to training.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=325f2a66eb7de7d118d3d1fc3cb1d05bc0a074863c406edfbd4fbc1396e39b52&view=explore&country=GBR&kind=decision_cases)
+### State the target precisely, including the baseline and exclusions. Is it a GDP-intensity target?
 
-## security_architecture · 2025-06-24
+Policy date: 2025-01-30. Source language: en.
 
-The UK's 2025 strategy makes NATO foremost in armed-forces planning, investment, training and equipment.
+**Authored target:** The target is at least an 81% reduction in greenhouse-gas emissions by 2035 relative to 1990, excluding international aviation and shipping. It is an emissions-reduction target, not a reduction in emissions per unit of GDP. [GBR-climate-2035-2025]
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=2fe81a35392fc5b633aafba134b14b78034a50eb008ca1a29b30abba8a1dfa2a&view=explore&country=GBR&kind=policy_positions)
+**Inspect:** Preserves 81%, 1990 and 2035; Retains aviation/shipping exclusion; Does not confuse emissions with GDP intensity.
 
-## china_relations · 2025-06-24
+[Official source for GBR-climate-2035-2025](https://assets.publishing.service.gov.uk/media/679b655f6bb4c44f0805e7bc/uk-2035-nationally-determined-contribution-large-print.pdf)
 
-The strategy combines high-level engagement and pragmatic cooperation with China, including trade and global challenges, with protective measures against identified security threats.
+### Describe the conditions on cooperation with China in this strategy. What should a policy simulation preserve?
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=fa47e7305bb9bbabfb985cb985e8f4ca19e962e359ffc4a738f491502b9a3bfd&view=explore&country=GBR&kind=policy_positions)
+Policy date: 2025-06-24. Source language: en.
 
-## climate_commitments · 2025-01-30
+**Authored target:** The strategy supports direct engagement and pragmatic cooperation where these serve UK interests, alongside a threat-driven security response. A simulation should preserve the aim of resilient economic growth as well as continuing disagreements and protective measures. [GBR-china-engagement-2025]
 
-The UK's submitted target is at least an 81% reduction in greenhouse-gas emissions by 2035 relative to 1990, excluding international aviation and shipping.
+**Inspect:** Preserves both engagement and security concerns; Does not invent a blanket disengagement policy.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=b2ba86c70616dbc9e7a41b3619f6ffb6174bd9158581355574f5db53cd6129d3&view=explore&country=GBR&kind=policy_positions)
+[Official source for GBR-china-engagement-2025](https://assets.publishing.service.gov.uk/media/685ab0da72588f418862075c/E03360428_National_Security_Strategy_Accessible.pdf)
 
-## unsc_reform · 2024-11-11
+### What concrete organizational priority does the strategy's NATO-first approach establish?
 
-The UK supported a Council with membership in the mid-twenties, expanding both categories, with permanent African representation and permanent seats for Brazil, Germany, India and Japan.
+Policy date: 2025-06-24. Source language: en.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=e549f4adcb65fd540a2361fc3651ae9f3dc5be3d7e28699a66e32cdd3c315e0f&view=explore&country=GBR&kind=policy_positions)
+**Authored target:** It prioritizes NATO in how the armed forces plan, invest, train and equip themselves. The passage establishes that organizing priority; it does not determine the answer to every individual procurement or deployment decision. [GBR-nato-first-2025]
+
+**Inspect:** Names concrete planning implications; Does not invent an individual operational decision.
+
+[Official source for GBR-nato-first-2025](https://assets.publishing.service.gov.uk/media/685ab0da72588f418862075c/E03360428_National_Security_Strategy_Accessible.pdf)
+
+## Training representation
+
+[Inspect the field-by-field training format](../docs/EXPLORER_PRESENTATION.md): blue prompt and evidence provide context, green completion receives supervised loss, and review metadata stays alongside the example. Public JSON previews omit source passages; full originals remain in the owner view.

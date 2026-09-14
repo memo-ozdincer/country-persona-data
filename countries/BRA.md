@@ -1,47 +1,67 @@
-# Brazil
+# Brazil: data and training examples
 
-[Open all Brazil records](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=BRA&view=explore) · [Statistics](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=BRA&kind=country_statistics&view=explore)
+[Open annotated example](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=BRA)
 
-Country attribution identifies the speaker or represented institution, not the population’s personality. Joint and EU positions retain institutional scope.
+## Available records by type
 
-## Territorial integrity of Ukraine — October 2022 · 2022-10-12
+| Type | Distinct record IDs |
+|---|---:|
+| Source records | 2,332 |
+| Evidence passages | 611 |
+| Recorded actions / responses | 8,234 |
+| Curated policy positions | 5 |
+| Authored policy applications | 4 |
+| Prepared prompt / completion views | 3 |
+| Linked decision cases | 2 |
 
-Brazil supported territorial integrity despite omission of its proposed explicit call to cease hostilities and negotiate.
+Distinct record IDs within each type and country, across indexed releases. Review/lineage objects are excluded. Translations, segments and derived views can overlap: do not add the rows or treat them as independent trajectories. Shared institutional records appear under each relevant country.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=517a9ead28ae4c55c19ad965e637937569c254b21c1af3208ae2999da01c8587&view=explore&country=BRA&kind=decision_cases)
+Source languages: ar, en, es, fr, pt, ru, zh.
 
-## Aggression against Ukraine — March 2022 · 2022-03-02
+## Actual authored applications
 
-Brazil supported the resolution's Charter and humanitarian objectives but cautioned against interpreting it as permission for indiscriminate sanctions or arms deployments, and emphasized negotiations.
+These are dated, source-grounded review candidates, not authentic historical Q&A or model outputs. None of these new applications is admitted to training.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=3ede541b9a969e8011bbc82548efba11442dfe96b9403d210fe14cd2abd2e840&view=explore&country=BRA&kind=decision_cases)
+### Distinguish the position this report describes for Brazil itself from the treatment it supports for other developing members.
 
-## agricultural_trade · 2025-07-08
+Policy date: 2022-10-19. Source language: en.
 
-The joint statement defended public food stockholding and opposed agricultural trade restrictions using environmental, security or climate concerns as a protectionist pretext.
+**Authored target:** The report describes Brazil’s decision to begin forgoing special and differential treatment in negotiations, while retaining support for needs-based flexibility for least-developed and other developing members. This dated position should not be generalized to all countries or assumed unchanged today. [BRA-wto-differential-treatment-2022]
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=6dc24d4c3e26e872f18f45120f538f1441a54f47c113c2168ac198bcebc15313&view=explore&country=BRA&kind=policy_positions)
+**Inspect:** Distinguishes Brazil's own choice from treatment of others; Preserves negotiation scope; Avoids assuming the 2022 position is current.
 
-## unsc_reform · 2025-07-08
+[Official source for BRA-wto-differential-treatment-2022](https://www.wto.org/english/tratop_e/tpr_e/g432_e.pdf)
 
-India and Brazil jointly supported expanding both Council membership categories and mutually supported each other's permanent membership. They also recorded Brazilian support for India's 2028–29 elected-seat candidacy.
+### Can the Brazilian commitment be represented as a single unqualified 67% target on the UK's 1990 baseline?
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=b6d7cffddd5f3f8ea1ec97da1c8638735e490d6ac39f9fd9f5dd34982cf92273&view=explore&country=BRA&kind=policy_positions)
+Policy date: 2024-11-13. Source language: pt.
 
-## climate_commitments · 2024-11-13
+**Authored target:** No. This NDC specifies a 59–67% range relative to 2005 for 2035. The quoted absolute level is 1.05–0.85 GtCO2e using GWP AR5. Replacing the range or the baseline changes the commitment. [BRA-climate-2035-2024]
 
-Brazil's NDC states a 59–67% emissions-reduction range for 2035 relative to 2005, with an absolute level of 1.05–0.85 GtCO2e using GWP AR5.
+**Inspect:** Preserves the range rather than selecting the upper bound; Preserves 2005 baseline and 2035 target year; Keeps the stated emissions-accounting metric.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=b51987f18afb02860fecaa4f5f39f0949ec9b13b01de7102cf3d6c42252eb41a&view=explore&country=BRA&kind=policy_positions)
+[Official source for BRA-climate-2035-2024](https://www.gov.br/mma/pt-br/assuntos/noticias/brasil-entrega-a-onu-nova-ndc-alinhada-ao-acordo-de-paris/ndc-versao-em-portugues.pdf)
 
-## sanctions · 2024-10-30
+### Compare the government position on unilateral national measures with its position on Security Council sanctions in this excerpt.
 
-The attributed ministry note opposes the Cuba embargo and extraterritorial application of discriminatory national laws, and presents Security Council adoption as the basis for lawful sanctions.
+Policy date: 2024-10-30. Source language: pt.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=e362d25546f49a6a6533faefc686d7a326dee7ae836d5c79304fdf036402dbd6&view=explore&country=BRA&kind=policy_positions)
+**Authored target:** The attributed note objects to the Cuba embargo and extraterritorial national measures, while treating Security Council adoption differently. That is Brazil’s stated legal and diplomatic position in this source, not an independent legal ruling. [BRA-unilateral-sanctions-2024]
 
-## wto_development_treatment · 2022-10-19
+**Inspect:** Distinguishes unilateral measures from Security Council sanctions; Attributes the legal characterization to the government; Retains the excerpt's speaker and date.
 
-Brazil's 2022 report describes its 2019 decision to begin forgoing special and differential treatment in current and future WTO negotiations while supporting needs-based flexibility for other developing members.
+[Official source for BRA-unilateral-sanctions-2024](https://funag.gov.br/biblioteca-nova/produto/loc_pdf/1299/1/repertorio_de_politica_externa%3A_posicoes_do_brasil_2023-2024)
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=565a1272dad33089ff91652f2843d83ac70bcc840a1c803d0c93a40c23b703c6&view=explore&country=BRA&kind=policy_positions)
+### Did supporting ES-11/1 mean Brazil endorsed indiscriminate sanctions and arms deployments? Explain the recorded vote and the representative's reservation.
+
+Policy date: 2022-03-02. Source language: en.
+
+**Authored target:** Brazil voted in favour. Its representative nevertheless warned against interpreting the resolution as permission for indiscriminate sanctions or arms deployments and stressed a negotiated settlement. The recorded support and the stated reservation must both be retained. [BRA-ES-11-1-20220302]
+
+**Inspect:** Gets the vote right; Preserves the reservation; Does not generalize this explanation into opposition to every sanction in every conflict.
+
+[Official source for BRA-ES-11-1-20220302](https://docs.un.org/A/ES-11/PV.5)
+
+## Training representation
+
+[Inspect the field-by-field training format](../docs/EXPLORER_PRESENTATION.md): blue prompt and evidence provide context, green completion receives supervised loss, and review metadata stays alongside the example. Public JSON previews omit source passages; full originals remain in the owner view.

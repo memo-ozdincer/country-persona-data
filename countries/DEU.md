@@ -1,35 +1,48 @@
-# Germany
+# Germany: data and training examples
 
-[Open all Germany records](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=DEU&view=explore) · [Statistics](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=DEU&kind=country_statistics&view=explore)
+[Open annotated example](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=DEU)
 
-Country attribution identifies the speaker or represented institution, not the population’s personality. Joint and EU positions retain institutional scope.
+## Available records by type
 
-## Territorial integrity of Ukraine — October 2022 · 2022-10-12
+| Type | Distinct record IDs |
+|---|---:|
+| Source records | 11,273 |
+| Evidence passages | 1,413 |
+| Recorded actions / responses | 825 |
+| Curated policy positions | 3 |
+| Authored policy applications | 2 |
+| Prepared prompt / completion views | 5,473 |
+| Linked decision cases | 2 |
 
-The draft rejects the referendums and attempted annexation, calls for non-recognition, demands reversal and withdrawal, and supports peaceful resolution.
+Distinct record IDs within each type and country, across indexed releases. Review/lineage objects are excluded. Translations, segments and derived views can overlap: do not add the rows or treat them as independent trajectories. Shared institutional records appear under each relevant country.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=07995310c883e3d9510f1f925333621e272cc5c309c050739d1752a6d7bae54c&view=explore&country=DEU&kind=decision_cases)
+Source languages: ar, de, en, es, fr, ja, pl, pt, ru, uk, zh.
 
-## Aggression against Ukraine — March 2022 · 2022-03-02
+## Actual authored applications
 
-The draft condemns the aggression against Ukraine and demands that Russia end its use of force and withdraw its forces.
+These are dated, source-grounded review candidates, not authentic historical Q&A or model outputs. None of these new applications is admitted to training.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=772621d9bbf2cb35fcd4d7bd7f1b7a276da6fad8d5a4761ec6b86bded6a6b92b&view=explore&country=DEU&kind=decision_cases)
+### Assess a proposal to source all critical energy-transition inputs from a single Chinese supplier. Would the stated strategy instead require ending all economic and climate cooperation with China?
 
-## economic_security · 2023-07-13
+Policy date: 2023-07-13. Source language: en.
 
-Germany's 2023 strategy seeks to preserve economic ties with China while reducing dependencies in critical sectors. It identifies medicines, medical technology, rare earths, energy-transition inputs and semiconductor supply chains as concerns.
+**Authored target:** The proposal would raise a critical-dependency concern under our 2023 China Strategy: energy-transition inputs are among the areas it identifies for reducing dependence. Diversification would be consistent with that policy, but the source does not determine approval of this particular contract. The strategy seeks to preserve economic ties and cooperate on climate; it does not call for ending all cooperation with China. [DEU-china-economic-dependencies-2023; DEU-china-climate-cooperation-2023]
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=57da19ecdd55224b44bf6bddcaed9fd93d888730a11f84f61bcacbc71e8768fe&view=explore&country=DEU&kind=policy_positions)
+**Inspect:** Identifies concentration risk as an application of the strategy; Distinguishes de-risking from blanket decoupling; Preserves climate cooperation; Does not invent contract approval or a numeric concentration limit.
 
-## climate_cooperation · 2023-07-13
+[Official source for DEU-china-economic-dependencies-2023](https://www.auswaertiges-amt.de/resource/blob/2608580/49d50fecc479304c3da2e2079c55e106/china-strategie-en-data.pdf)
+[Official source for DEU-china-climate-cooperation-2023](https://www.auswaertiges-amt.de/resource/blob/2608580/49d50fecc479304c3da2e2079c55e106/china-strategie-en-data.pdf)
 
-Germany's 2023 strategy treats cooperation with China as necessary for addressing climate change and identifies China as an important actor on biodiversity and global health.
+### Record the climate commitment relevant to France, preserving its institutional scope, metric and dates.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=b40a4fad8dda48dedf7ed1d71fd4e2efba1b35f92ce625fb2dfec0461ac69fdf&view=explore&country=DEU&kind=policy_positions)
+Policy date: 2023. Source language: en.
 
-## climate_commitments · 2023
+**Authored target:** The report describes an EU collective target: at least 55% lower net greenhouse-gas emissions by 2030 relative to 1990. It is relevant context for France, but it does not establish a separate, identical French national pledge. [FRA-EU-climate-2030-2023]
 
-The EU report describes a collective target of at least 55% lower net greenhouse-gas emissions by 2030 relative to 1990.
+**Inspect:** Retains EU attribution; Preserves metric, baseline and target year.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=6ca15905dd3c2fb0b836254740c8deee029207ba4ef0309da6658ff0c4be3ae0&view=explore&country=DEU&kind=policy_positions)
+[Official source for FRA-EU-climate-2030-2023](https://www.wto.org/english/tratop_e/tpr_e/g442_e.pdf)
+
+## Training representation
+
+[Inspect the field-by-field training format](../docs/EXPLORER_PRESENTATION.md): blue prompt and evidence provide context, green completion receives supervised loss, and review metadata stays alongside the example. Public JSON previews omit source passages; full originals remain in the owner view.

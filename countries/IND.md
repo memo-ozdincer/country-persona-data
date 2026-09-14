@@ -1,47 +1,57 @@
-# India
+# India: data and training examples
 
-[Open all India records](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=IND&view=explore) · [Statistics](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=IND&kind=country_statistics&view=explore)
+[Open annotated example](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=IND)
 
-Country attribution identifies the speaker or represented institution, not the population’s personality. Joint and EU positions retain institutional scope.
+## Available records by type
 
-## Territorial integrity of Ukraine — October 2022 · 2022-10-12
+| Type | Distinct record IDs |
+|---|---:|
+| Source records | 2,019 |
+| Evidence passages | 272 |
+| Recorded actions / responses | 8,265 |
+| Curated policy positions | 5 |
+| Authored policy applications | 3 |
+| Prepared prompt / completion views | 3 |
+| Linked decision cases | 2 |
 
-India explained its abstention through diplomacy and concerns about food, fuel and fertilizer impacts on developing countries.
+Distinct record IDs within each type and country, across indexed releases. Review/lineage objects are excluded. Translations, segments and derived views can overlap: do not add the rows or treat them as independent trajectories. Shared institutional records appear under each relevant country.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=9512b664a9e4b63e5b30ea6cc2c8c01a1486b2155ec0b52d6a982ff4e7b0ebc0&view=explore&country=IND&kind=decision_cases)
+Source languages: ar, en, es, fr, ru, zh.
 
-## Aggression against Ukraine — March 2022 · 2022-03-02
+## Actual authored applications
 
-India abstained while emphasizing civilian evacuation, humanitarian access, an immediate ceasefire and diplomacy. This public explanation is not proof of an unstated private motive.
+These are dated, source-grounded review candidates, not authentic historical Q&A or model outputs. None of these new applications is admitted to training.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=d4620affd5968667b19e0638743e30aa82451bc18dafda89fd3b337cd3fdf15b&view=explore&country=IND&kind=decision_cases)
+### What qualifications would India seek to preserve when considering disciplines on harmful fisheries subsidies, according to this report?
 
-## agricultural_trade · 2025-07-08
+Policy date: 2020-11-25. Source language: en.
 
-The joint statement defended public food stockholding and opposed agricultural trade restrictions using environmental, security or climate concerns as a protectionist pretext.
+**Authored target:** The report accepts the need for disciplines on harmful subsidies while emphasizing livelihood protections and policy space for subsistence, artisanal and small-scale fishers. A useful representation must preserve both the discipline and that qualification. [IND-fisheries-subsidies-2020]
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=6dc24d4c3e26e872f18f45120f538f1441a54f47c113c2168ac198bcebc15313&view=explore&country=IND&kind=policy_positions)
+**Inspect:** Preserves support for disciplines; Preserves the livelihood and policy-space qualification.
 
-## unsc_reform · 2025-07-08
+[Official source for IND-fisheries-subsidies-2020](https://www.wto.org/english/tratop_e/tpr_e/g403_e.pdf)
 
-India and Brazil jointly supported expanding both Council membership categories and mutually supported each other's permanent membership. They also recorded Brazilian support for India's 2028–29 elected-seat candidacy.
+### Does this announcement promise 45% lower total emissions and 50% renewable electricity generation?
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=b6d7cffddd5f3f8ea1ec97da1c8638735e490d6ac39f9fd9f5dd34982cf92273&view=explore&country=IND&kind=policy_positions)
+Policy date: 2022-08-03. Source language: en.
 
-## climate_commitments · 2022-08-03
+**Authored target:** No. The 45% target concerns emissions intensity of GDP relative to 2005, not total emissions. The roughly 50% target concerns installed electric-power capacity from non-fossil resources, not the share of electricity generated or renewables alone. Both targets refer to 2030. [IND-climate-2030-2022]
 
-India's announcement specifies a 45% reduction in emissions intensity of GDP by 2030 relative to 2005 and about 50% non-fossil installed electric-power capacity by 2030.
+**Inspect:** Distinguishes intensity from absolute emissions; Distinguishes installed capacity from actual generation; Distinguishes non-fossil from renewables-only.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=1391f92b0998ffe055d38179aa7c3994e86cde72ba47fcb3a305f26ea27ec165&view=explore&country=IND&kind=policy_positions)
+[Official source for IND-climate-2030-2022](https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1847813&lang=2&reg=48)
 
-## fisheries_subsidies · 2020-11-25
+### Would requiring every developing country to give up special treatment match this report's position?
 
-India's report supports disciplines on harmful fisheries subsidies while demanding policy space and differential treatment for subsistence, artisanal and small-scale fishers.
+Policy date: 2020-11-25. Source language: en.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=5955e0ac753e2cdf9b19a0cd1fec1f93ffa87a1ed58ea7ee4b5dedaa0ca936f8&view=explore&country=IND&kind=policy_positions)
+**Authored target:** No. The report argues that special and differential treatment should remain available to developing countries. It treats voluntary decisions by members able to forgo it as more acceptable, which is different from a universal mandatory waiver. [IND-wto-differential-treatment-2020]
 
-## wto_development_treatment · 2020-11-25
+**Inspect:** Preserves voluntary versus mandatory distinction; Attributes the position to this dated report.
 
-India's report argues for retaining special and differential treatment for developing countries, while considering voluntary decisions to forgo it more acceptable.
+[Official source for IND-wto-differential-treatment-2020](https://www.wto.org/english/tratop_e/tpr_e/g403_e.pdf)
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=782debe4a40c601eb85694aef84ce2a057ccec9494adc7a1754efa9b5be3779f&view=explore&country=IND&kind=policy_positions)
+## Training representation
+
+[Inspect the field-by-field training format](../docs/EXPLORER_PRESENTATION.md): blue prompt and evidence provide context, green completion receives supervised loss, and review metadata stays alongside the example. Public JSON previews omit source passages; full originals remain in the owner view.

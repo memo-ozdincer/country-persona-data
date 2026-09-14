@@ -1,29 +1,38 @@
-# China
+# China: data and training examples
 
-[Open all China records](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=CHN&view=explore) · [Statistics](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=CHN&kind=country_statistics&view=explore)
+[Open annotated example](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=CHN)
 
-Country attribution identifies the speaker or represented institution, not the population’s personality. Joint and EU positions retain institutional scope.
+## Available records by type
 
-## Territorial integrity of Ukraine — October 2022 · 2022-10-12
+| Type | Distinct record IDs |
+|---|---:|
+| Source records | 34,330 |
+| Evidence passages | 6,165 |
+| Recorded actions / responses | 1,089 |
+| Curated policy positions | 2 |
+| Authored policy applications | 1 |
+| Prepared prompt / completion views | 20,428 |
+| Linked decision cases | 2 |
 
-China emphasized negotiations, humanitarian relief and limiting spillover harms. This statement is context, not an explicit explanation of its recorded abstention.
+Distinct record IDs within each type and country, across indexed releases. Review/lineage objects are excluded. Translations, segments and derived views can overlap: do not add the rows or treat them as independent trajectories. Shared institutional records appear under each relevant country.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=069e22930840af6db0d4a56c895389dcb9627e00d34fbd3e6d0abde2d6f02099&view=explore&country=CHN&kind=decision_cases)
+Source languages: ar, en, es, fr, ru, zh.
 
-## Aggression against Ukraine — March 2022 · 2022-03-02
+## Actual authored applications
 
-China said the resolution lacked sufficient consultation and attention to security concerns and diplomatic settlement; it abstained. It also affirmed respect for sovereignty and territorial integrity.
+These are dated, source-grounded review candidates, not authentic historical Q&A or model outputs. None of these new applications is admitted to training.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=6b1f7d46ff43b9539ce5e7607ba6567b2813f761e72f2cbb134844984d711ee8&view=explore&country=CHN&kind=decision_cases)
+### A proposed development agreement requires the recipient to change its domestic political system. How does that compare with the white paper's stated approach, and can we infer that every Chinese project complies?
 
-## development_cooperation · 2021-01-10
+Policy date: 2021-01-10. Source language: en.
 
-The white paper describes cooperation projects as being proposed, agreed and led by recipient countries.
+**Authored target:** That requirement conflicts with the white paper's stated opposition to political strings and interference in a recipient's chosen development path. It also emphasizes recipient leadership of projects. These are published principles; they do not establish the terms or conduct of every Chinese-financed project. [CHN-development-conditions-2021; CHN-development-recipient-leadership-2021]
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=dee0993696ab7cae673e7e02b94ff074663a9bdf014882d0c2928f456402f419&view=explore&country=CHN&kind=policy_positions)
+**Inspect:** Applies the stated condition to the proposal; Attributes the principle to the white paper; Does not turn a government statement into independent proof of compliance.
 
-## development_cooperation · 2021-01-10
+[Official source for CHN-development-conditions-2021](https://english.mee.gov.cn/Resources/publications/Whitep/202101/P020210122374486901993.pdf)
+[Official source for CHN-development-recipient-leadership-2021](https://english.mee.gov.cn/Resources/publications/Whitep/202101/P020210122374486901993.pdf)
 
-China's 2021 white paper states that development cooperation should respect countries' chosen development paths and should not involve interference, imposed political conditions or pursuit of political self-interest. This is its stated policy, not independent verification of every project.
+## Training representation
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=ef6956bdb20378fd95ff98efd72329225eaa7322dc3aeafa59dd0ea7069294dd&view=explore&country=CHN&kind=policy_positions)
+[Inspect the field-by-field training format](../docs/EXPLORER_PRESENTATION.md): blue prompt and evidence provide context, green completion receives supervised loss, and review metadata stays alongside the example. Public JSON previews omit source passages; full originals remain in the owner view.

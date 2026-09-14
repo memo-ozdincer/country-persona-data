@@ -1,41 +1,57 @@
-# France
+# France: data and training examples
 
-[Open all France records](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=FRA&view=explore) · [Statistics](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=FRA&kind=country_statistics&view=explore)
+[Open annotated example](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=FRA)
 
-Country attribution identifies the speaker or represented institution, not the population’s personality. Joint and EU positions retain institutional scope.
+## Available records by type
 
-## Territorial integrity of Ukraine — October 2022 · 2022-10-12
+| Type | Distinct record IDs |
+|---|---:|
+| Source records | 3,163 |
+| Evidence passages | 746 |
+| Recorded actions / responses | 8,354 |
+| Curated policy positions | 4 |
+| Authored policy applications | 3 |
+| Prepared prompt / completion views | 2 |
+| Linked decision cases | 2 |
 
-France rejected recognition of annexation and urged support for the text as a defence of Charter principles.
+Distinct record IDs within each type and country, across indexed releases. Review/lineage objects are excluded. Translations, segments and derived views can overlap: do not add the rows or treat them as independent trajectories. Shared institutional records appear under each relevant country.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=3a26b79a7ac277b17fb21669af65c56a830471c645fd6eb5d9ad0a4445d7c713&view=explore&country=FRA&kind=decision_cases)
+Source languages: ar, de, en, es, fr, ru, zh.
 
-## Aggression against Ukraine — March 2022 · 2022-03-02
+## Actual authored applications
 
-The draft condemns the aggression against Ukraine and demands that Russia end its use of force and withdraw its forces.
+These are dated, source-grounded review candidates, not authentic historical Q&A or model outputs. None of these new applications is admitted to training.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=7d18626ac3a472bd0c45b1eea52571ef12f313fbac120c9941cbea76b9474831&view=explore&country=FRA&kind=decision_cases)
+### What combination of European and Atlantic defence priorities does this review support?
 
-## security_architecture · 2025-07-14
+Policy date: 2025-07-14. Source language: en.
 
-France's 2025 review calls for stronger European defence capabilities within the Atlantic Alliance and prioritizing European-made solutions.
+**Authored target:** The review combines a stronger European pillar within the Atlantic Alliance with greater European capabilities and a preference for European-made solutions. European autonomy and Atlantic cooperation are presented together. [FRA-european-defence-2025]
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=914d7048fa96c42472c5e7caf5132035090285abdff5b9cfc193e67ba56bf3aa&view=explore&country=FRA&kind=policy_positions)
+**Inspect:** Preserves European capability and procurement priorities; Does not equate autonomy with leaving NATO.
 
-## nuclear_doctrine · 2025-07-14
+[Official source for FRA-european-defence-2025](https://www.sgdsn.gouv.fr/files/files/Publications/20250713_NP_SGDSN_RNS2025_EN_1_0.pdf)
 
-The review presents nuclear deterrence as an ultimate security guarantee, reserves use to the President, describes a strictly defensive purpose and retains ambiguity about exact circumstances.
+### Record the climate commitment relevant to France, preserving its institutional scope, metric and dates.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=b23fb5092403ea3929cd2b6822586640a98d10d0b2b6f2376deccd7796c58620&view=explore&country=FRA&kind=policy_positions)
+Policy date: 2023. Source language: en.
 
-## climate_commitments · 2023
+**Authored target:** The report describes an EU collective target: at least 55% lower net greenhouse-gas emissions by 2030 relative to 1990. It is relevant context for France, but it does not establish a separate, identical French national pledge. [FRA-EU-climate-2030-2023]
 
-The EU report describes a collective target of at least 55% lower net greenhouse-gas emissions by 2030 relative to 1990.
+**Inspect:** Retains EU attribution; Preserves metric, baseline and target year.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=6ca15905dd3c2fb0b836254740c8deee029207ba4ef0309da6658ff0c4be3ae0&view=explore&country=FRA&kind=policy_positions)
+[Official source for FRA-EU-climate-2030-2023](https://www.wto.org/english/tratop_e/tpr_e/g442_e.pdf)
 
-## unsc_reform · Date unknown
+### Does this document let us specify an exact French nuclear-use threshold?
 
-France's published position supports expanding both membership categories, permanent seats for Germany, Brazil, India and Japan, and greater African representation including permanent membership.
+Policy date: 2025-07-14. Source language: en.
 
-[Inspect evidence and complete record](https://memo-ozdincer-country-persona-explorer.static.hf.space/#id=d6f3dff6868fc3155d75551e7e6508a270df213eba1ac90cbbe57a51cde78e4d&view=explore&country=FRA&kind=policy_positions)
+**Authored target:** No. It assigns the decision to the President and describes extreme self-defence, while deliberately retaining ambiguity about exact circumstances. A precise trigger would go beyond the published doctrine. [FRA-nuclear-doctrine-2025]
+
+**Inspect:** Separates published doctrine from private decision rules; Does not invent an operational trigger.
+
+[Official source for FRA-nuclear-doctrine-2025](https://www.sgdsn.gouv.fr/files/files/Publications/20250713_NP_SGDSN_RNS2025_EN_1_0.pdf)
+
+## Training representation
+
+[Inspect the field-by-field training format](../docs/EXPLORER_PRESENTATION.md): blue prompt and evidence provide context, green completion receives supervised loss, and review metadata stays alongside the example. Public JSON previews omit source passages; full originals remain in the owner view.
