@@ -1,0 +1,10 @@
+.cache/
+.venv/
+__pycache__/
+data/raw/
+data/prepared/
+data/canonical/
+*.sqlite
+*.sqlite.gz
+research.tar.gz
+.env*
