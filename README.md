@@ -8,9 +8,9 @@ Dated evidence, public policy positions and recorded decisions for country-perso
 
 ## Start with substance
 
-- [Compare six countries on the same UN decisions](https://memo-ozdincer-country-persona-explorer.hf.space/#view=compare)
-- [Read actual policy positions](https://memo-ozdincer-country-persona-explorer.hf.space/#kind=policy_positions&view=explore)
-- [Inspect country statistics](https://memo-ozdincer-country-persona-explorer.hf.space/#kind=country_statistics&view=explore)
+- [Compare six countries on the same UN decisions](https://memo-ozdincer-country-persona-explorer.static.hf.space/#view=compare)
+- [Read actual policy positions](https://memo-ozdincer-country-persona-explorer.static.hf.space/#kind=policy_positions&view=explore)
+- [Inspect country statistics](https://memo-ozdincer-country-persona-explorer.static.hf.space/#kind=country_statistics&view=explore)
 - [Read the 12 policy applications](docs/COUNTRY_EXTENSION_EXAMPLES.md)
 - [Understand the decision-case format](docs/DECISION_CASE_SCHEMA.md)
 
@@ -18,12 +18,12 @@ Dated evidence, public policy positions and recorded decisions for country-perso
 
 | Country | Distinct record objects with that attribution | Browse |
 |---|---:|---|
-| [China](countries/CHN.md) | 116,703 | [Open](https://memo-ozdincer-country-persona-explorer.hf.space/#country=CHN&view=explore) |
-| [Germany](countries/DEU.md) | 40,071 | [Open](https://memo-ozdincer-country-persona-explorer.hf.space/#country=DEU&view=explore) |
-| [France](countries/FRA.md) | 12,341 | [Open](https://memo-ozdincer-country-persona-explorer.hf.space/#country=FRA&view=explore) |
-| [United Kingdom](countries/GBR.md) | 11,084 | [Open](https://memo-ozdincer-country-persona-explorer.hf.space/#country=GBR&view=explore) |
-| [India](countries/IND.md) | 10,636 | [Open](https://memo-ozdincer-country-persona-explorer.hf.space/#country=IND&view=explore) |
-| [Brazil](countries/BRA.md) | 11,258 | [Open](https://memo-ozdincer-country-persona-explorer.hf.space/#country=BRA&view=explore) |
+| [China](countries/CHN.md) | 116,703 | [Open](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=CHN&view=explore) |
+| [Germany](countries/DEU.md) | 40,071 | [Open](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=DEU&view=explore) |
+| [France](countries/FRA.md) | 12,341 | [Open](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=FRA&view=explore) |
+| [United Kingdom](countries/GBR.md) | 11,084 | [Open](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=GBR&view=explore) |
+| [India](countries/IND.md) | 10,636 | [Open](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=IND&view=explore) |
+| [Brazil](countries/BRA.md) | 11,258 | [Open](https://memo-ozdincer-country-persona-explorer.static.hf.space/#country=BRA&view=explore) |
 
 ## Coverage and limitations
 

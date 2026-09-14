@@ -27,15 +27,15 @@ def main():
         for row in db.execute('SELECT path,bytes FROM files ORDER BY path'):
             p=ROOT/row['path'];assert p.stat().st_size==row['bytes'],str(p)
             tar.add(p,arcname=row['path'],recursive=False)
-    for rel in ['explorer/app.py','explorer/index.html','explorer/Dockerfile','explorer/README.md',
-       'scripts/build_data_catalog.py','scripts/build_decision_cases.py','scripts/stage_data_publication.py',
+    for rel in ['explorer/app.py','explorer/index.html','explorer/data-client.js','explorer/Dockerfile','explorer/README.md',
+       'scripts/build_data_catalog.py','scripts/build_decision_cases.py','scripts/stage_data_publication.py','scripts/stage_static_explorer.py','scripts/publish_data_catalog.py','src/country_persona/__init__.py','src/country_persona/io.py',
        'docs/DATA_EXPLORER.md','docs/DECISION_CASE_SCHEMA.md','docs/COUNTRY_EXTENSION_EXAMPLES.md',
        'data/source_registry.json','data/rights_registry.json','data/country_extension_registry.json',
        'data/expansion_source_registry.json','data/manifests/decision-cases-20260914.json','reports/data-catalog.json']:
         dst=GITHUB/rel;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/rel,dst)
     guide=GITHUB/'docs/DATA_EXPLORER.md'
     guide.write_text(guide.read_text().replace('Existing [training decisions](DECISION_REGISTER.md) and [four-country source methodology](COUNTRY_EXTENSION_20260914.md) retain their literature links.', 'Additional training decisions and source-method notes remain in the original research workspace.'))
-    stats=json.loads((OUT/'stats.json').read_text());base='https://memo-ozdincer-country-persona-explorer.hf.space/'
+    stats=json.loads((OUT/'stats.json').read_text());base='https://memo-ozdincer-country-persona-explorer.static.hf.space/'
     lines=['# Country Persona Data','', '**Created and maintained by Memo Ozdincer.**', '',
       'Dated evidence, public policy positions and recorded decisions for country-persona research.','',
       '**[Open the interactive explorer](https://huggingface.co/spaces/memo-ozdincer/country-persona-explorer)** · [Download the tables](https://huggingface.co/datasets/memo-ozdincer/country-persona-data) · [Full research view (owner login)](https://huggingface.co/spaces/memo-ozdincer/country-persona-research)','',
@@ -53,7 +53,7 @@ def main():
         body=[f'# {name}','',f'[Open all {name} records]({base}#country={code}&view=explore) · [Statistics]({base}#country={code}&kind=country_statistics&view=explore)','', 'Country attribution identifies the speaker or represented institution, not the population’s personality. Joint and EU positions retain institutional scope.','']
         for r in rows:
             body.extend([f'## {r["title"]} · {r["date"] or "Date unknown"}', '',r['summary'],'',f'[Inspect evidence and complete record]({base}#'+urlencode({'id':r['uid'],'view':'explore','country':code,'kind':r['kind']})+')',''])
-        (GITHUB/'countries'/f'{code}.md').write_text('\n'.join(body)+'\n')
+        (GITHUB/'countries'/f'{code}.md').write_text('\n'.join(body).rstrip()+'\n')
     lines+=['','## Coverage and limitations','',
       f'The catalog indexes **{stats["exact_unique_records"]:,} exact distinct JSON record objects** from **{stats["input_rows"]:,} row occurrences** across **{stats["input_jsonl_files"]} files**, plus an inventory of **{stats["inventory_files"]:,} source and prepared files**. These counts include overlapping translations, review manifests and alternative training views; they are not independent examples.', '',
       '**12 decision cases** cover two UN resolutions and six countries. Seven have an attributed statement; five still lack one. Twenty policy records and fifteen authored applications are available across the prototype and extension. New cases are quarantined retrospective demonstrations, not a hidden benchmark or proof of persona quality.','',
@@ -65,7 +65,7 @@ def main():
       '- [Four-country official-source registry](data/country_extension_registry.json)',
       '- [Source-use status](data/rights_registry.json)',
       '- [Generated coverage report](reports/data-catalog.json)','',
-      'The explorer is read-only and uses CPU hosting. It does not call a model or launch training. This is a presentation companion to the original research workspace. Rebuilding requires its private source snapshots and preparation library.']
+      'The hosted explorer is static and read-only; it requires no paid compute. It does not call a model or launch training. This is a presentation companion to the original research workspace. Rebuilding requires its private source snapshots and preparation library.']
     (GITHUB/'README.md').write_text('\n'.join(lines)+'\n')
     (GITHUB/'ATTRIBUTION.md').write_text('''# Attribution
 
@@ -86,5 +86,8 @@ date-released: "2026-09-14"
 url: "https://github.com/memo-ozdincer/country-persona-data"
 repository-code: "https://github.com/memo-ozdincer/country-persona-data"
 ''')
+    (GITHUB/'requirements.txt').write_text('pyarrow==25.0.1\nhuggingface_hub==0.36.2\n')
+    (GITHUB/'.gitignore').write_text('.cache/\n.venv/\n__pycache__/\ndata/raw/\ndata/prepared/\ndata/canonical/\n*.sqlite\n*.sqlite.gz\nresearch.tar.gz\n.env*\n')
+    for f in GITHUB.rglob('*.md'):f.write_text(f.read_text().rstrip()+'\n')
     print({'public_space_bytes':sum(p.stat().st_size for p in PUBLIC.iterdir() if p.is_file()),'private_space_bytes':sum(p.stat().st_size for p in PRIVATE.iterdir() if p.is_file()),'github_directory':str(GITHUB)})
 if __name__=='__main__':main()
