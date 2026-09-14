@@ -26,7 +26,9 @@ def query(params):
     if params.get('country'):
         clauses.append('EXISTS(SELECT 1 FROM record_countries c WHERE c.uid=r.uid AND c.country=?)');values.append(params['country'])
     for key,op in [('after','>='),('before','<=')]:
-        if params.get(key):clauses.append(f"r.date!='' AND r.date {op} ?");values.append(params[key])
+        if params.get(key):
+            suffix="CASE length(r.date) WHEN 4 THEN r.date||'-12-31' WHEN 7 THEN r.date||'-31' ELSE r.date END" if key=='after' else "CASE length(r.date) WHEN 4 THEN r.date||'-01-01' WHEN 7 THEN r.date||'-01' ELSE r.date END"
+            clauses.append(f"r.date!='' AND ({suffix}) {op} ?");values.append(params[key])
     if params.get('q'):
         terms=params['q'][:300].split()
         term=' AND '.join('"'+s.replace('"','""')+'"' for s in terms)

@@ -18,8 +18,10 @@ const STATIC_DATA = (()=>{
       if(p.get('country')&&!r.country.split(' / ').includes(p.get('country')))return false;
       for(const k of ['language','source','split','readiness'])if(p.get(k)&&r[k]!==p.get(k))return false;
       for(const [k,tags] of [['topic','topic_tags'],['release','release_tags']])if(p.get(k)&&!r[tags].includes(p.get(k)))return false;
-      if(p.get('after')&&(!r.date||r.date<p.get('after')))return false;
-      if(p.get('before')&&(!r.date||r.date>p.get('before')))return false;
+      const low=r.date.length===4?r.date+'-01-01':r.date.length===7?r.date+'-01':r.date;
+      const high=r.date.length===4?r.date+'-12-31':r.date.length===7?r.date+'-31':r.date;
+      if(p.get('after')&&(!r.date||high<p.get('after')))return false;
+      if(p.get('before')&&(!r.date||low>p.get('before')))return false;
       if(q.length){const text=[r.record_id,r.country,r.title,r.summary,r.source,r.topic,r.language].join(' ').toLocaleLowerCase();if(!q.every(t=>text.includes(t)))return false}
       return true;
     }).sort((a,b)=>b.date.localeCompare(a.date)||a.uid.localeCompare(b.uid));

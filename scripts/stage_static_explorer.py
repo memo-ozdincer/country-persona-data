@@ -44,6 +44,11 @@ def main():
     shutil.copytree(public/'indexes',private/'indexes',dirs_exist_ok=True)
     for n in ['files.json.gz','decisions.json.gz']:shutil.copyfile(public/n,private/n)
     shutil.copyfile(CACHE/'explorer-private/research.tar.gz',private/'research.tar.gz')
+    archive=CACHE/'research-files-dataset';archive.mkdir(exist_ok=True)
+    shutil.copyfile(private/'research.tar.gz',archive/'research.tar.gz')
+    (archive/'file-inventory.json').write_text(json.dumps(files,indent=2)+'\n')
+    shutil.copyfile(ROOT/'data/rights_registry.json',archive/'rights_registry.json')
+    (archive/'README.md').write_text('---\npretty_name: Country Persona Research Files\n---\n# Country Persona Research Files\n\nCreated and maintained by **Memo Ozdincer**. Private original research archive; publishers retain attribution and source-use status.\n\n[Full research browser](https://huggingface.co/spaces/memo-ozdincer/country-persona-research)\n\n`research.tar.gz` contains all raw, canonical and prepared files listed in `file-inventory.json`, with original paths. This is an archive, not a train/test dataset. New decision cases remain review candidates. Sign in to download.\n')
     html=(ROOT/'explorer/index.html').read_text()
     html=html.replace('<script>','<script src="data-client.js"></script>\n<script>',1)
     html=html.replace("async function get(url){const r=await fetch(url);const x=await r.json();if(!r.ok)throw Error(x.error||r.statusText);return x}","async function get(url){return STATIC_DATA.get(url)}")
@@ -51,12 +56,12 @@ def main():
     html=html.replace('Download selection</a>','Download matching metadata</a>')
     for dest,is_private in [(public,False),(private,True)]:
       page=html
-      if is_private:page=page.replace('<footer>','<section class="wide"><a class="btn" href="research.tar.gz">Download all original research files (compressed archive)</a><p class="tiny muted" style="margin-top:12px">The archive includes the complete file inventory. Record details above load individually.</p></section><footer>')
+      if is_private:page=page.replace('<footer>','<section class="wide"><a class="btn" href="https://huggingface.co/datasets/memo-ozdincer/country-persona-research-files/resolve/main/research.tar.gz?download=true">Download all original research files (compressed archive)</a><p class="tiny muted" style="margin-top:12px">The archive includes the complete file inventory. Record details above load individually.</p></section><footer>')
       (dest/'index.html').write_text(page);shutil.copyfile(ROOT/'explorer/data-client.js',dest/'data-client.js')
       stats=json.loads((CACHE/'data-publication/stats.json').read_text());stats['local_full_data']=is_private;stats['hosting']='static';stats['private_archive_available']=is_private
       (dest/'stats.json').write_text(json.dumps(stats,indent=2)+'\n')
       title='Country Persona Research' if is_private else 'Country Persona Explorer'
       (dest/'README.md').write_text(f'---\ntitle: {title}\nemoji: 🌐\ncolorFrom: blue\ncolorTo: green\nsdk: static\napp_file: index.html\npinned: false\n---\n# {title}\n\nCreated and maintained by **Memo Ozdincer**. '+('Account-only full original research records and files.' if is_private else 'Public metadata, factual values and source-grounded summaries.')+'\n\n[GitHub](https://github.com/memo-ozdincer/country-persona-data) · [Data tables](https://huggingface.co/datasets/memo-ozdincer/country-persona-data)\n')
-    report={'public_files':sum(p.is_file() for p in public.rglob('*')),'private_files':sum(p.is_file() for p in private.rglob('*')),'original_records_hash_verified':sum(map(len,buckets.values())),'index_rows':sum(map(len,indexes.values())),'public_bytes':sum(p.stat().st_size for p in public.rglob('*') if p.is_file()),'private_bytes':sum(p.stat().st_size for p in private.rglob('*') if p.is_file())}
+    report={'public_files':sum(p.is_file() for p in public.rglob('*')),'private_files':sum(p.is_file() for p in private.rglob('*')),'original_records_hash_verified':sum(map(len,buckets.values())),'index_rows':sum(map(len,indexes.values())),'public_bytes':sum(p.stat().st_size for p in public.rglob('*') if p.is_file()),'private_bytes':sum(p.stat().st_size for p in private.rglob('*') if p.is_file()),'private_host_bytes':sum(p.stat().st_size for p in private.rglob('*') if p.is_file() and p.name!='research.tar.gz'),'private_archive_bytes':(archive/'research.tar.gz').stat().st_size}
     (ROOT/'reports/static-explorer-build.json').write_text(json.dumps(report,indent=2)+'\n');print(report)
 if __name__=='__main__':main()

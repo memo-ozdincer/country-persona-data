@@ -13,7 +13,8 @@ def main():
     if owner!='memo-ozdincer':raise ValueError('Authenticated account is not the requested owner')
     jobs=[('dataset','country-persona-data',False,Path('.cache/data-publication')),
           ('space','country-persona-explorer',False,Path('.cache/explorer-public-static')),
-          ('space','country-persona-research',True,Path('.cache/explorer-private-static'))]
+          ('space','country-persona-research',True,Path('.cache/explorer-private-static')),
+          ('dataset','country-persona-research-files',True,Path('.cache/research-files-dataset'))]
     results=[]
     # Establish each exact destination and verify its visibility before sending any files.
     for typ,name,private,folder in jobs:
@@ -24,11 +25,12 @@ def main():
         if info.private!=private:raise ValueError(f'Unexpected visibility for {rid}; not uploading')
     def upload(job):
         typ,name,private,folder=job;rid=f'{owner}/{name}'
+        ignored=['catalog.sqlite','catalog.next.sqlite']+(['research.tar.gz'] if typ=='space' else [])
         result=api.upload_folder(repo_id=rid,repo_type=typ,folder_path=folder,
-             ignore_patterns=['catalog.sqlite','catalog.next.sqlite'],
+             ignore_patterns=ignored,
              commit_message='Publish country evidence catalog and decision comparisons')
         info=api.repo_info(rid,repo_type=typ,files_metadata=True)
-        expected=[p for p in folder.rglob('*') if p.is_file() and p.name not in ('catalog.sqlite','catalog.next.sqlite')]
+        expected=[p for p in folder.rglob('*') if p.is_file() and p.name not in ignored]
         siblings={r.rfilename:r for r in info.siblings}
         for p in expected:
             rel=p.relative_to(folder).as_posix();assert rel in siblings,rel
