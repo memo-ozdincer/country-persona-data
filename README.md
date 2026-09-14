@@ -1,39 +1,34 @@
-# Country Persona Data
+# Data explorer for persona fine-tuning
 
-**Created and maintained by Memo Ozdincer.**
+A living inventory of country-attributed sources, available trace types and possible training uses.
 
-Dated government positions, concrete policy questions and the evidence behind each answer.
+**[Open the explorer](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html)** · [Contribute](CONTRIBUTING.md) · [Download catalog tables](https://huggingface.co/datasets/memo-ozdincer/country-persona-data)
 
-**[Open the country overview](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html)** · [Download public tables](https://huggingface.co/datasets/memo-ozdincer/country-persona-data) · [Full research view (owner login)](https://huggingface.co/spaces/memo-ozdincer/country-persona-research)
+| Country | Evidence record IDs | Source collections |
+|---|---:|---:|
+| [China](countries/CHN.md) | 41,632 | 12 |
+| [Germany](countries/DEU.md) | 13,561 | 12 |
+| [France](countries/FRA.md) | 12,315 | 10 |
+| [United Kingdom](countries/GBR.md) | 11,052 | 12 |
+| [India](countries/IND.md) | 10,609 | 10 |
+| [Brazil](countries/BRA.md) | 11,231 | 10 |
 
-## Characteristic examples
+Distinct record_id per country across source records, passages, actions, statistics and curated annotations. Excludes training-format copies, review/lineage, evaluation wrappers and profiles. Each ID is assigned once, preferring its canonical version. Translations and derived spans remain separate IDs; these are not independent training traces.
 
-| Country | Featured policy question | Authored application records |
-|---|---|---:|
-| [China](countries/CHN.md) | A proposed development agreement requires the recipient to change its domestic political system. How does that compare with the white paper's stated approach, and can we infer that every Chinese project complies? | 1 |
-| [Germany](countries/DEU.md) | Assess a proposal to source all critical energy-transition inputs from a single Chinese supplier. Would the stated strategy instead require ending all economic and climate cooperation with China? | 2 |
-| [France](countries/FRA.md) | What combination of European and Atlantic defence priorities does this review support? | 3 |
-| [United Kingdom](countries/GBR.md) | State the target precisely, including the baseline and exclusions. Is it a GDP-intensity target? | 3 |
-| [India](countries/IND.md) | What qualifications would India seek to preserve when considering disciplines on harmful fisheries subsidies, according to this report? | 3 |
-| [Brazil](countries/BRA.md) | Distinguish the position this report describes for Brazil itself from the treatment it supports for other developing members. | 4 |
+## Trace and environment inventory
 
-There are **15 distinct authored applications** and **20 policy positions** across the six countries. A joint EU application appears under both France and Germany; do not sum country rows. More authored examples appear on each country page.
+Sources include authentic Q&A, full transcripts, statements, policy evidence, directed UPR recommendations/responses, vote labels and statistics. Expand a source to see its actual field structure and character-length distribution.
 
-## What is ready, and what is missing
+**Available:** source records, some question–answer pairs, observed labels, source-grounded authored candidates and sample linked decision cases. **Not built:** interactive environments, multi-agent trajectories, training reward verifiers and preference pairs. A proposed SFT or RLVR mapping is not a ready environment.
 
-Source records, evidence passages, observed actions and prepared training views have different units and overlap. The country pages show distinct record IDs by type, excluding review/lineage objects from the displayed counts. They are not counts of independent training trajectories.
+## Contribute without cluster access
 
-**The Ukraine-only comparison was a presentation problem:** only 12 fully joined country–decision cases exist, covering two Ukraine resolutions. That limited subset no longer defines the landing page. It remains available in the full catalog with explicit coverage labeling. No additional decision events are claimed.
+The public overview runs from committed static files. Source descriptions and trace mappings are editable JSON; generated counts retain their definitions and provenance. See [CONTRIBUTING.md](CONTRIBUTING.md) for local preview, source proposals, corrections and validation.
 
-The new authored examples are not admitted to training. No preference pairs or multi-agent trajectories are prepared. The next evidence-conditioned LoRA experiment should follow review, a retrieval baseline, and evaluation on separate event families. The earlier China/Germany pilot is a separate release.
-
-## Inspect the recipe and data
-
-- [Annotated training fields and count definitions](docs/EXPLORER_PRESENTATION.md)
-- [Public overview JSON, including redacted format previews](explorer/overview.json)
-- [Full searchable catalog](https://memo-ozdincer-country-persona-explorer.static.hf.space/advanced.html)
-- [Exploration guide](docs/DATA_EXPLORER.md)
-- [Four-country authored examples](docs/COUNTRY_EXTENSION_EXAMPLES.md)
+- [Source descriptions](explorer/source_profiles.json)
+- [Trace recipes and field mappings](explorer/trace_types.json)
+- [Measured inventory](explorer/sources.json)
+- [Explorer methodology](docs/EXPLORER_PRESENTATION.md)
 - [Attribution](ATTRIBUTION.md) · [Source registry](data/source_registry.json) · [Source-use status](data/rights_registry.json)
 
-Public downloads contain metadata, factual values and project-authored summaries. Original source bodies remain in the account-only research view where reuse is unresolved or reserved. Publisher links remain visible. Static hosting uses no GPU compute.
+Original publishers retain attribution. Public previews omit restricted source bodies; source links and record references remain available. The two-event Ukraine decision subset is one small source collection, not the whole corpus.
