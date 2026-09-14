@@ -12,14 +12,14 @@ def main():
     disable_progress_bars();api=HfApi();owner=api.whoami()['name']
     if owner!='memo-ozdincer':raise ValueError('Authenticated account is not the requested owner')
     jobs=[('dataset','country-persona-data',False,Path('.cache/data-publication')),
-          ('space','country-persona-explorer',False,Path('.cache/explorer-public')),
-          ('space','country-persona-research',True,Path('.cache/explorer-private'))]
+          ('space','country-persona-explorer',False,Path('.cache/explorer-public-static')),
+          ('space','country-persona-research',True,Path('.cache/explorer-private-static'))]
     results=[]
     # Establish each exact destination and verify its visibility before sending any files.
     for typ,name,private,folder in jobs:
         assert folder.is_dir()
         rid=f'{owner}/{name}'
-        api.create_repo(repo_id=rid,repo_type=typ,private=private,exist_ok=True,**({'space_sdk':'docker'} if typ=='space' else {}))
+        api.create_repo(repo_id=rid,repo_type=typ,private=private,exist_ok=True,**({'space_sdk':'static'} if typ=='space' else {}))
         info=api.repo_info(rid,repo_type=typ)
         if info.private!=private:raise ValueError(f'Unexpected visibility for {rid}; not uploading')
     def upload(job):

@@ -11,9 +11,9 @@ Project owner and publisher: **Memo Ozdincer** (`memo-ozdincer`).
 
 Start with **Compare decisions**. Each event has the same proposal across six countries, their final votes, the statements we located and explicit missing context. Select a country to narrow the table, or open a country button inside a table to inspect its sources.
 
-In **Explore records**, start with policy positions, policy applications or country statistics. Use the country buttons and filters together. Search covers metadata, titles and public summaries. Select a record to see its readable fields, original publisher links, evidence pages, readiness and full structured representation. Download selection exports all matching public records, not just the displayed page. Filters and selected record are encoded in the URL for sharing.
+In **Explore records**, start with policy positions, policy applications or country statistics. Use the country buttons and filters together. Search covers metadata, titles and public summaries. Select a record to see its readable fields, original publisher links, evidence pages, readiness and full structured representation. Download matching metadata exports all matching index records, not just the displayed page. The Hugging Face tables retain the full public provenance fields. Filters and selected record are encoded in the URL for sharing.
 
-**All source files** inventories every file beneath raw, canonical and prepared data, including receipts and alternative training views. A file inventory entry is not a claim of unique substantive content. The full research view adds original JSON, source text and file downloads. Public presentation keeps source attribution and links without redistributing third-party full text under an invented blanket license.
+**All source files** inventories every file beneath raw, canonical and prepared data, including receipts and alternative training views. A file inventory entry is not a claim of unique substantive content. The full research view adds original JSON and source text on demand, plus a complete archive download of all research files. Public presentation keeps source attribution and links without redistributing third-party full text under an invented blanket license.
 
 ## What the counts mean
 
@@ -46,7 +46,11 @@ Run from the original research repository after restoring the frozen source data
 ```bash
 .venv/bin/python scripts/build_decision_cases.py
 .venv/bin/python scripts/build_data_catalog.py
+.venv/bin/python scripts/stage_data_publication.py
+.venv/bin/python scripts/stage_static_explorer.py
 .venv/bin/python -m pytest -q
+# Uses the owner's existing Hugging Face login; never embed a token.
+.venv/bin/python scripts/publish_data_catalog.py
 ```
 
 The catalog discovers new canonical/prepared JSONL files automatically. Add newly sourced decisions as the same structured case type to make them appear in comparison and browsing views. Preserve unknowns instead of filling them with model guesses. For a new decision, acquire the exact proposal, distinguish final from procedural votes, locate an attributed explanation, inspect qualifiers and source dates, and preserve the event's existing split relationships. Public summaries must remain source-grounded and separate from original transcripts.
@@ -60,10 +64,10 @@ PRIVATE_DATA_ROOT="$PWD" \
 .venv/bin/python explorer/app.py
 ```
 
-Open http://127.0.0.1:7860. The local server binds to loopback by default. Full records are read only from indexed paths and checked against their content hash before display. Public deployments have no private-data root or source archive; the separate account-only deployment contains the research archive behind Hugging Face's access controls.
+Open http://127.0.0.1:7860. The local server binds to loopback by default. Full records are read only from indexed paths and checked against their content hash before display. Public deployments contain no source archive; the separate account-only static deployment contains the original record chunks and research archive behind Hugging Face's access controls.
 
 ## Format and research basis
 
-The public Hub release uses [explicit Parquet subsets](https://huggingface.co/docs/hub/datasets-data-files-configuration), small row groups and page indexes. The explorer uses [SQLite FTS5](https://www.sqlite.org/fts5.html) with parameterized filters. [Docker Spaces](https://huggingface.co/docs/hub/spaces-sdks-docker) host the read-only app on CPU. No model API or paid inference endpoint is needed.
+The public Hub release uses [explicit Parquet subsets](https://huggingface.co/docs/hub/datasets-data-files-configuration), small row groups and page indexes. The explorer uses [SQLite FTS5](https://www.sqlite.org/fts5.html) with parameterized filters. [Static Spaces](https://huggingface.co/docs/hub/spaces-sdks-static) host the browser without a running server. Hosting via Docker was rejected by the service as requiring PRO; no subscription was purchased. The static view loads metadata by record type and gzip-compressed detail chunks on demand. No model API or paid inference endpoint is needed.
 
 [UN General Debate Corpus](https://arxiv.org/abs/1707.02774) motivates attributing public state positions, without claiming private preferences. [CheckList](https://aclanthology.org/2020.acl-main.442/) motivates behavioral cases that test distinctions such as requested change versus condition of support. Additional training decisions and source-method notes remain in the original research workspace. This catalog does not certify source permissions, annotation quality or persona performance.

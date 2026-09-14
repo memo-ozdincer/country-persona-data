@@ -42,4 +42,4 @@ Public downloads contain metadata, factual values and project-authored summaries
 - [Source-use status](data/rights_registry.json)
 - [Generated coverage report](reports/data-catalog.json)
 
-The explorer is read-only and uses CPU hosting. It does not call a model or launch training. This is a presentation companion to the original research workspace. Rebuilding requires its private source snapshots and preparation library.
+The hosted explorer is static and read-only; it requires no paid compute. It does not call a model or launch training. This is a presentation companion to the original research workspace. Rebuilding requires its private source snapshots and preparation library.
