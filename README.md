@@ -28,6 +28,7 @@ The public overview runs from committed static files. Source descriptions and tr
 - [Source descriptions](explorer/source_profiles.json)
 - [Trace recipes and field mappings](explorer/trace_types.json)
 - [Measured inventory](explorer/sources.json)
+- [Data priorities / TODO](TODO.md)
 - [Explorer methodology](docs/EXPLORER_PRESENTATION.md)
 - [Attribution](ATTRIBUTION.md) · [Source registry](data/source_registry.json) · [Source-use status](data/rights_registry.json)
 
