@@ -383,17 +383,17 @@ Languages: en. Recorded dates: 2022-03-02 → 2022-10-12.
 
 | Trace / record type | Count | Input chars, median / p95 | Target chars, median / p95 | Body chars, median / p95 |
 |---|---:|---|---|---|
-| Proposal → action + public explanation | 2 | Not present / measured | Not present / measured | Not present / measured |
+| Proposal → vote + optional statement | 2 | Not present / measured | Not present / measured | Not present / measured |
 
 Exact character counts of stored question/context/history fields, target text, or document body; before adding metadata and the chat template. No tokenizer estimates. n is the number with that field present; missing fields are not zero-length observations.
 
-### Proposal → action + public explanation
+### Proposal → vote + optional statement
 
 Joined retrospective cases; some explanation fields remain missing.
 
 **Prompt/context:** proposal, country and decision date; only information available before the vote for a forecasting task
 
-**Output/target:** observed final vote; public explanation, where available, as a separate retrospective target
+**Output/target:** observed final vote; attributed statement, where available and correctly classified, in a separate retrospective task
 
 **Use:** Supervised decision/explanation tasks after review; offline evaluation, not an interactive environment.
 
