@@ -30,6 +30,7 @@ The public overview runs from committed static files. Source descriptions and tr
 - [Measured inventory](explorer/sources.json)
 - [Data priorities / TODO](TODO.md)
 - [Explorer methodology](docs/EXPLORER_PRESENTATION.md)
+- [Decision post-training format](docs/DECISION_POSTTRAINING_FORMAT.md)
 - [Attribution](ATTRIBUTION.md) · [Source registry](data/source_registry.json) · [Source-use status](data/rights_registry.json)
 
 Original publishers retain attribution. Public previews omit restricted source bodies; source links and record references remain available. The two-event Ukraine decision subset is one small source collection, not the whole corpus.
