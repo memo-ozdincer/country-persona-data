@@ -1,4 +1,4 @@
-# India (10,609 evidence record IDs)
+# India (10,612 evidence record IDs)
 
 [Open source explorer](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=IND)
 
@@ -6,7 +6,7 @@
 
 | Record type | Distinct IDs |
 |---|---:|
-| Source records | 2,019 |
+| Source records | 2,022 |
 | Evidence passages | 272 |
 | Recorded actions / responses | 8,265 |
 | Curated policy positions | 5 |
@@ -149,7 +149,7 @@ Question contains recommendation; text contains the response label.
 
 </details>
 
-<details><summary>Project annotations (policy claims and applications) (9 records)</summary>
+<details><summary>Project annotations (policy claims and applications) (12 records)</summary>
 
 Project-authored claims and question–evidence–answer applications derived from linked official sources. These are review candidates, not authentic historical dialogue.
 
@@ -158,8 +158,8 @@ Languages: en. Recorded dates: 2020-11-25 → 2025-07-08.
 | Trace / record type | Count | Input chars, median / p95 | Target chars, median / p95 | Body chars, median / p95 |
 |---|---:|---|---|---|
 | Curated policy claim | 5 | Not present / measured | Not present / measured | Not present / measured |
+| Source document / evidence passage | 4 | Not present / measured | Not present / measured | Not present / measured |
 | Authored evidence → policy answer | 3 | 1448 / 1834 (n=3) | 287 / 298 (n=3) | Not present / measured |
-| Source document / evidence passage | 1 | Not present / measured | Not present / measured | Not present / measured |
 
 Exact character counts of stored question/context/history fields, target text, or document body; before adding metadata and the chat template. No tokenizer estimates. n is the number with that field present; missing fields are not zero-length observations.
 
@@ -177,20 +177,6 @@ Attributed claim and source spans; not a complete dialogue.
 
 [Actual record reference](https://memo-ozdincer-country-persona-explorer.static.hf.space/advanced.html#view=explore&id=6dc24d4c3e26e872f18f45120f538f1441a54f47c113c2168ac198bcebc15313)
 
-### Authored evidence → policy answer
-
-Paired messages exist as review candidates; extension also has SFT export files.
-
-**Prompt/context:** messages[0]: system instruction; messages[1]: institution/date, cited evidence and question
-
-**Output/target:** messages[-1]: authored assistant answer
-
-**Use:** Evidence-conditioned SFT candidate; possible later preferences from reviewed errors.
-
-**Scoring/environment:** rubric, source spans, scope and unsupported-claim checks. Review is pending; no automated correctness oracle.
-
-[Actual record reference](https://memo-ozdincer-country-persona-explorer.static.hf.space/advanced.html#view=explore&id=ffb2d2c26a216b450ac8b7a00d4b38dda55a36c11b14f1aaf6f06841b44c9a1b)
-
 ### Source document / evidence passage
 
 Source evidence exists; a task and answer are not inherent in a document.
@@ -204,6 +190,20 @@ Source evidence exists; a task and answer are not inherent in a document.
 **Scoring/environment:** Check exact source spans and institutional scope. The text itself is not an automatic reward function.
 
 [Actual record reference](https://memo-ozdincer-country-persona-explorer.static.hf.space/advanced.html#view=explore&id=697154df8efd5697b37821b33453fed89f632eda37f244acd2ffd137d2c68182)
+
+### Authored evidence → policy answer
+
+Paired messages exist as review candidates; extension also has SFT export files.
+
+**Prompt/context:** messages[0]: system instruction; messages[1]: institution/date, cited evidence and question
+
+**Output/target:** messages[-1]: authored assistant answer
+
+**Use:** Evidence-conditioned SFT candidate; possible later preferences from reviewed errors.
+
+**Scoring/environment:** rubric, source spans, scope and unsupported-claim checks. Review is pending; no automated correctness oracle.
+
+[Actual record reference](https://memo-ozdincer-country-persona-explorer.static.hf.space/advanced.html#view=explore&id=ffb2d2c26a216b450ac8b7a00d4b38dda55a36c11b14f1aaf6f06841b44c9a1b)
 
 </details>
 

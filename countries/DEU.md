@@ -11,7 +11,7 @@
 | Recorded actions / responses | 825 |
 | Curated policy positions | 3 |
 | Authored policy applications | 2 |
-| Prepared prompt / completion views | 5,473 |
+| Prepared prompt / completion views | 5,477 |
 | Linked decision cases | 2 |
 
 Distinct record_id per country across source records, passages, actions, statistics and curated annotations. Excludes training-format copies, review/lineage, evaluation wrappers and profiles. Each ID is assigned once, preferring its canonical version. Translations and derived spans remain separate IDs; these are not independent training traces.

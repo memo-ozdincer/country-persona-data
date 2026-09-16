@@ -1,4 +1,4 @@
-# Brazil (11,231 evidence record IDs)
+# Brazil (11,234 evidence record IDs)
 
 [Open source explorer](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=BRA)
 
@@ -6,7 +6,7 @@
 
 | Record type | Distinct IDs |
 |---|---:|
-| Source records | 2,332 |
+| Source records | 2,335 |
 | Evidence passages | 611 |
 | Recorded actions / responses | 8,234 |
 | Curated policy positions | 5 |
@@ -149,17 +149,17 @@ Question contains recommendation; text contains the response label.
 
 </details>
 
-<details><summary>Project annotations (policy claims and applications) (10 records)</summary>
+<details><summary>Project annotations (policy claims and applications) (13 records)</summary>
 
 Project-authored claims and question–evidence–answer applications derived from linked official sources. These are review candidates, not authentic historical dialogue.
 
-Languages: en. Recorded dates: 2022-03-02 → 2025-07-08.
+Languages: en, pt. Recorded dates: 2022-03-02 → 2025-07-08.
 
 | Trace / record type | Count | Input chars, median / p95 | Target chars, median / p95 | Body chars, median / p95 |
 |---|---:|---|---|---|
 | Curated policy claim | 5 | Not present / measured | Not present / measured | Not present / measured |
 | Authored evidence → policy answer | 4 | 1153 / 3580 (n=4) | 284.5 / 339 (n=4) | Not present / measured |
-| Source document / evidence passage | 1 | Not present / measured | Not present / measured | Not present / measured |
+| Source document / evidence passage | 4 | Not present / measured | Not present / measured | Not present / measured |
 
 Exact character counts of stored question/context/history fields, target text, or document body; before adding metadata and the chat template. No tokenizer estimates. n is the number with that field present; missing fields are not zero-length observations.
 

@@ -1,4 +1,4 @@
-# United Kingdom (11,052 evidence record IDs)
+# United Kingdom (11,054 evidence record IDs)
 
 [Open source explorer](https://memo-ozdincer-country-persona-explorer.static.hf.space/index.html#country=GBR)
 
@@ -6,7 +6,7 @@
 
 | Record type | Distinct IDs |
 |---|---:|
-| Source records | 2,294 |
+| Source records | 2,296 |
 | Evidence passages | 520 |
 | Recorded actions / responses | 8,186 |
 | Curated policy positions | 4 |
@@ -63,7 +63,7 @@ Question contains recommendation; text contains the response label.
 
 </details>
 
-<details><summary>Project annotations (policy claims and applications) (8 records)</summary>
+<details><summary>Project annotations (policy claims and applications) (10 records)</summary>
 
 Project-authored claims and question–evidence–answer applications derived from linked official sources. These are review candidates, not authentic historical dialogue.
 
@@ -73,7 +73,7 @@ Languages: en. Recorded dates: 2022-03-02 → 2025-06-24.
 |---|---:|---|---|---|
 | Curated policy claim | 4 | Not present / measured | Not present / measured | Not present / measured |
 | Authored evidence → policy answer | 3 | 738 / 1884 (n=3) | 247 / 297 (n=3) | Not present / measured |
-| Source document / evidence passage | 1 | Not present / measured | Not present / measured | Not present / measured |
+| Source document / evidence passage | 3 | Not present / measured | Not present / measured | Not present / measured |
 
 Exact character counts of stored question/context/history fields, target text, or document body; before adding metadata and the chat template. No tokenizer estimates. n is the number with that field present; missing fields are not zero-length observations.
 
